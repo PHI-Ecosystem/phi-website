@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PHI Ecosystem</title>
   <style>
     * {
@@ -23,18 +23,56 @@
       padding: 20px;
     }
 
-    img {
-      display: block;
+    .artwork {
+      position: relative;
       width: 100%;
       max-width: 600px;
+    }
+
+    .artwork img {
+      display: block;
+      width: 100%;
       height: auto;
-      border: 0;
+    }
+
+    .info {
+      position: absolute;
+      left: 85.5%;
+      top: 84.5%;
+      transform: translate(-50%, -50%);
+      width: 9%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: clamp(12px, 3vw, 21px);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .info:focus-visible {
+      outline: 1px solid #111;
+      outline-offset: 3px;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
   <main>
-    <img src="phi-main.jpg" alt="PHI Ecosystem">
+    <div class="artwork">
+      <img src="phi-main.jpg" alt="PHI Ecosystem">
+      <a
+        class="info"
+        href="PHI.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Information about PHI Ecosystem"
+        title="About PHI"
+      >i</a>
+    </div>
   </main>
 </body>
 </html>
